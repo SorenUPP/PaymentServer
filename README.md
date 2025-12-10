@@ -1,3 +1,4 @@
+Dependencies should automaticly fetched with this git clone, but if it didnt start on npm start, ->
 All dependencies:
 npm install express
 npm install cors
