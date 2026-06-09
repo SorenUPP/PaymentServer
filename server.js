@@ -13,10 +13,10 @@ const PORT = 3000;
 
 // PayPal Credentials
 const PAYPAL_CLIENT =
-  "Afllyny7MKV2a-1DmMB5lElisazAHM67Xkn-GZ5rvVUEFouTIEu7GEva8tHRprkm2FMPOcygKvxBVTeX";
+  "";
 const PAYPAL_SECRET =
-  "ENMZpogUlrsLBzNgRzteNQYNTkCy7V_H_kKt9_t1m2BrhrI3uzRAzIfV3PhxVGTMIJlaJBFtFwAOlGAy";
-const PAYPAL_API = "https://api-m.sandbox.paypal.com";
+  "";
+const PAYPAL_API = "";
 
 
 
@@ -65,7 +65,7 @@ app.post("/register", async (req, res) => {
     const authHeader =
       "Basic " + Buffer.from(`${APP_ID}:${APP_SECRET}`).toString("base64");
 
-    const registerResponse = await fetch('https://api.reactionalmusic.com/v1/auth/clients/register', {
+    const registerResponse = await fetch('', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -103,7 +103,7 @@ app.post("/login", async (req, res) => {
 
   try {
     const response = await fetch(
-      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.FIREBASE_WEB_API_KEY}`,
+      `}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -274,7 +274,7 @@ const { CLIENT_ID, CLIENT_SECRET } = docSnap.data();
   };
 
   const entitlementResponse = await fetch(
-    `https://api.reactionalmusic.com/v1/customer/clients/${CLIENT_ID}/entitlements`,
+    ``,
     {
       method: "POST",
       headers: {
