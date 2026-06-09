@@ -53,11 +53,11 @@ async function generateAccessToken() {
 }
 
 
-// == Registering new clients
+// Registering new clients
 app.post("/register", async (req, res) => {
   const { email, password } = req.body;
   try {
-    // 1️⃣ Firebase registration
+    // 1️Firebase registration
     const user = await admin.auth().createUser({ email, password });
 
     const APP_ID = process.env.APP_ID;
@@ -137,7 +137,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// == Login check
+// Login check
 async function requireLogin(req, res, next) {
   
   try {
